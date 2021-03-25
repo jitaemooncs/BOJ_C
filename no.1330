@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int a, b;
+    
+    // Prompt user
+    scanf("%d %d", &a, &b);
+    
+    // Compare 2 numbers
+    if (a > b)
+    {
+        printf(">\n");
+    }
+    else if (a < b)
+    {
+        printf("<\n");
+    }
+    else
+    {
+        printf("==\n");
+    }
+    
+    return 0;
+}
