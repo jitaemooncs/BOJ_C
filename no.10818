@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <limits.h>
+
+int main(void)
+{
+    int number;
+    
+    // Prompt user
+    scanf("%d", &number);
+    
+    int numbers[number];
+    
+    // Prompt user numbers in array
+    for (int i = 0; i < number; i++)
+    {
+        scanf("%d", &numbers[i]);
+    }
+    
+    int min = INT_MAX, max = INT_MIN;
+    
+    // Getting minimum number, maximum number in an array
+    for (int i = 0; i < number; i++)
+    {
+        if (min > numbers[i])
+        {
+            min = numbers[i];
+        }
+        
+        if (max < numbers[i])
+        {
+            max = numbers[i];
+        }
+    }
+    
+    printf("%d %d\n", min, max);
+    
+    return 0;
+}
