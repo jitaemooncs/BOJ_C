@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <limits.h>
+
+int main(void)
+{
+    /* 
+    a bit uneffective
+    should see others' codes
+    */
+    
+    int numbers[9];
+    
+    // Prompt user for numbers
+    for (int i = 0; i < 9; i++)
+    {
+        scanf("%d", &numbers[i]);
+    }
+    
+    int max = INT_MIN;
+    for (int i = 0; i < 9; i++)
+    {
+        if (max < numbers[i])
+        {
+            max = numbers[i];
+        }
+    }
+    
+    printf("%d\n", max);
+    for (int i = 0; i < 9; i++)
+    {
+        if (numbers[i] == max)
+        {
+            printf("%d\n", i + 1);
+        }
+    }
+}
